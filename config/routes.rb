@@ -7,4 +7,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  resources :open_ai, only: [] do
+    collection do
+      get :chat_gpt_response
+    end
+  end
 end
