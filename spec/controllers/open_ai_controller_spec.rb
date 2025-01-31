@@ -11,8 +11,8 @@ RSpec.describe OpenAiController, type: :controller do
     expect(response).to have_http_status(422)
   end
 
-  it "should return a response if prompt is passed" do
-    get :chat_gpt_response, params: { prompt: "Hello" }
-    expect(JSON.parse(response.body)['response']).to eq("Hello")
+  it "should return Hello World without quotes" do
+    get :chat_gpt_response, params: { prompt: "Write 'Hello World' without the quotes" }
+    expect(JSON.parse(response.body)['response']).to eq("Hello World")
   end
 end
