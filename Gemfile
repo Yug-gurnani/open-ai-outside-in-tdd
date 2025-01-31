@@ -49,4 +49,4 @@ end
 
 gem "rspec-rails"
 gem "ruby-openai", "~> 7.1"
-gem "dotenv-rails", "~> 2.1", ">= 2.1.1"
+gem "dotenv-rails", "~> 3.1"
